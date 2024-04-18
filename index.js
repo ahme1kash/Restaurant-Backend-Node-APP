@@ -18,6 +18,7 @@ app.use(morgan("dev")); //? dev tells about the info anout the url being hit and
 //* Routes
 // app.use("/api/v1/test", require("./routes/testRoute"));
 app.use("/api/v1/auth", require("./routes/authRoutes"));
+app.use("/api/v1/user", require("./routes/userRoutes"));
 app.listen(port, async (req, res) => {
   if (await connect()) {
     console.log(await connect());

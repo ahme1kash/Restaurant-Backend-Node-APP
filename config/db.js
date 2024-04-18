@@ -3,7 +3,7 @@ const colors = require("colors");
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URL);
-    return `Connection established successfully with database ${mongoose.connection.name} at port ${mongoose.connection.port}`
+    return `MongoDB Connection established successfully with database ${mongoose.connection.name} at port ${mongoose.connection.port}`
       .blue;
   } catch (err) {
     console.log(err);
