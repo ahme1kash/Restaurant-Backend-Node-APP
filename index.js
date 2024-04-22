@@ -19,8 +19,11 @@ app.use(morgan("dev")); //? dev tells about the info anout the url being hit and
 // app.use("/api/v1/test", require("./routes/testRoute"));
 app.use("/api/v1/auth", require("./routes/authRoutes"));
 app.use("/api/v1/user", require("./routes/userRoutes"));
+app.use("/api/v1/restaurant", require("./routes/restaurantRoutes"));
+app.use("/api/v1/category", require("./routes/categoryRoutes"));
 app.listen(port, async (req, res) => {
   if (await connect()) {
+    console.log("Server Status👇\n");
     console.log(await connect());
     console.log(`Server Up and Running at port ${port}`.yellow.bold.italic);
   }

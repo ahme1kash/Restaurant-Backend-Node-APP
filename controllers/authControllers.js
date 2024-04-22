@@ -106,8 +106,7 @@ const logoutController = async (req, res) => {
       if (err) {
         return res.status(401).send({
           success: false,
-          message:
-            "Un-Authorized User,Either User  not registered or already logged out.",
+          message: "Un-Authorized User or User already logged out.",
         });
       } else {
         tokenBlacklist.push(token);
