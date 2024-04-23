@@ -43,7 +43,7 @@ const getAllCategoryController = async (req, res) => {
     console.log(err);
     res.status(500).send({
       success: false,
-      message: "Error in API,Internal Server Error",
+      message: "Error in get category Controller API,Internal Server Error",
     });
   }
 };
