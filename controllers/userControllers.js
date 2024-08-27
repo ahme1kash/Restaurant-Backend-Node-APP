@@ -3,7 +3,7 @@ const userModel = require("../models/userModel");
 const bcryptjs = require("bcryptjs");
 const getUserController = async (req, res) => {
   // Below console contains id which comes from middleware "getUserMiddleware" from authMiddleware.js
-  //   console.log("USer data after hitting middleware", req.body);
+  console.log("USer data after hitting middleware", req.body);
   try {
     const user = await userModel.findById(req.body.id);
     // validation
@@ -35,6 +35,7 @@ const getUserController = async (req, res) => {
 const updateUserController = async (req, res) => {
   try {
     const user = await userModel.findById(req.body.id);
+    console.log("USer is ", user, user._doc)
     // validation
     if (!user) {
       return res.status(404).send({
@@ -71,6 +72,7 @@ const updateUserController = async (req, res) => {
 const updatePasswordController = async (req, res) => {
   try {
     const user = await userModel.findById({ _id: req.body.id });
+    console.log("User Details From Update Password Controller", user)
     // validation
     if (!user) {
       return res.status(404).send({

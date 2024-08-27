@@ -18,4 +18,4 @@ const getAdminMiddleware = async (req, res, next) => {
     });
   }
 };
-module.exports = getUserMiddleware;
+module.exports = getAdminMiddleware;

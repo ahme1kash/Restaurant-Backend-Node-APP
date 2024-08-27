@@ -1,5 +1,6 @@
 const express = require("express");
 const getUserMiddleware = require("../middlewares/authMiddleware");
+const getAdminMiddleware = require("../middlewares/adminMiddleware");
 const {
   createFoodController,
   getAllFoodController,
